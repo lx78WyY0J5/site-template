@@ -45,9 +45,9 @@ async function custom_pages_include() {
     }*/
 
     else if (pathname === "/404.html" || pathname === "/404" || pathname === "/404/") {
-        await include("./pages/contents/404.html", "content", true);
+        await include("./html/contents/404.html", "content", true);
     } else {
-        await include("./pages/contents/404.html", "content", true);
+        await include("./html/contents/404.html", "content", true);
     }
 }
 
