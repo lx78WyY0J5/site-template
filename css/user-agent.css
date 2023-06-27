@@ -1,0 +1,23 @@
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+ul {
+    padding-inline-start: 0px;
+    max-width: fit-content;
+}
+
+body {
+    margin: 0px;
+}
+
+p,
+a,
+h1 {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
