@@ -31,12 +31,12 @@ async function custom_pages_include() {
         pathname += "index.html";
     }
 
-    if (pathname === "/index.html") {
+    if (pathname === "/index.html" || pathname === "/site-template/") {
         await include("./html/contents/home.html", "content", true);
     }
 
 
-    else if (pathname === "/stats/") {
+    else if (pathname === "/site-template/stats/") {
         await include("./html/contents/home.html", "content", true);
     }
 
