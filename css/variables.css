@@ -1,8 +1,10 @@
 :root {
-    --border-color-red: var(--main-color-transparent-50);
+    --border-color: var(--main-color-transparent-50);
     --box-shadow: var(--main-color-transparent-50);
     --box-shadow-bottom: 0px 5px 20px 5px var(--box-shadow);
     --box-shadow-top: 0px -5px 20px 5px var(--box-shadow);
+    --box-shadow-all: 0px 0px 20px 10px var(--box-shadow);
+    --box-shadow-all-ranged: 0px 0px 50px 10px var(--box-shadow);
 }
 
 :root.black {
