@@ -1,0 +1,25 @@
+:root {
+    --distance: 20px;
+    --distance-anchor: 125px;
+}
+
+.settings-toggle {
+    top: var(--distance);
+}
+
+.top {
+    top: var(--distance-anchor);
+}
+
+.bot {
+    bottom: var(--distance-anchor);
+}
+
+.settings-toggle,
+.anchor {
+    z-index: 1001;
+    position: fixed;
+    right: var(--distance);
+}
+
+.anchor {}

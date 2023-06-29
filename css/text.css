@@ -1,0 +1,18 @@
+h1 {
+    text-decoration: underline;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--text-color-white);
+}
+
+a {
+    text-decoration: none;
+}

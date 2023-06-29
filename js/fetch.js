@@ -2,7 +2,9 @@ include_all();
 
 async function include_all() {
     await include("./html/includes/head.html", "head", false);
+    await include_css("./css/variables.css");
     await include_css("./css/user-agent.css");
+    await include_css("./css/text.css");
     await include_css("./css/utils.css");
     await include_css("./css/body.css");
 
@@ -11,8 +13,8 @@ async function include_all() {
     //await include_css("./css/menu.css");
     //await include("./html/includes/menu.html", "header", true);
 
-    //await include_css("./css/anchor.css");
-    //await include("./html/includes/anchor.html", "body", false);
+    await include_css("./css/anchor.css");
+    await include("./html/includes/anchor.html", "body", false);
 
     await include_css("./css/content.css");
     await include("./html/includes/content.html", "body");

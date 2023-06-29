@@ -1,19 +1,18 @@
 footer {
-    background-color: rgba(30, 30, 30, 1);
+    background-color: var(--background-color-darkest);
 
-    position: relative;
     bottom: 0;
 
     width: 100%;
 
     border: 0;
     border-top: 0.5vh;
-    border-color: rgb(255, 0, 0, 0.2);
+    border-color: var(--border-color-red);
     border-style: solid;
 
     z-index: 1000;
 
-    box-shadow: 0px -5px 20px 5px rgb(255 0 0 / 50%);
+    box-shadow: var(--box-shadow-top);
 
     padding-top: 15px;
     padding-bottom: 40px;
@@ -21,43 +20,48 @@ footer {
 
 footer>div>p {
     display: inline-block;
-    color: red;
+    color: var(--main-color);
 }
 
-footer>:first-child {
-    margin-left: 50px;
-}
+/*Mobile*/
+@media (max-width: 767px) {
 
-
-
-@media (min-width: 700px) {
-    footer>.right {
-        float: right;
+    footer {
+        position: relative;
     }
 
-    footer>.left {
-        float: left;
+    footer>:first-child {
+        text-align: left;
+        margin-left: 20px;
+        display: block;
     }
 
     footer>:last-child {
+        text-align: right;
+        margin-right: 20px;
+        margin-top: 10px;
+        display: block;
+    }
+}
+
+/*PC*/
+@media (min-width: 768px) {
+    footer {
+        position: sticky;
+    }
+
+    footer>:first-child {
+        float: left;
+        margin-left: 50px;
+    }
+
+    footer>:last-child {
+        float: right;
         margin-right: 50px;
     }
 
     footer>div>p {
         margin-left: 10px;
         margin-right: 10px;
-    }
-}
-
-@media (max-width: 700px) {
-
-    footer>.right,
-    footer>.left {
-        display: block;
-    }
-
-    footer>:last-child {
-        margin-left: 50px;
-        text-align: right;
     }
 }

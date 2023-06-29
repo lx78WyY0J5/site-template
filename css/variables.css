@@ -1,0 +1,38 @@
+:root {
+    --border-color-red: var(--main-color-transparent-50);
+    --box-shadow: var(--main-color-transparent-50);
+    --box-shadow-bottom: 0px 5px 20px 5px var(--box-shadow);
+    --box-shadow-top: 0px -5px 20px 5px var(--box-shadow);
+}
+
+:root.black {
+    --text-color-white: white;
+    --main-color: grey;
+    --main-color-transparent-50: rgba(255, 255, 255, 0.2);
+    --background-color: rgb(0, 0, 0);
+    --background-color-darkest: var(--background-color);
+}
+
+:root.dark {
+    --text-color-white: white;
+    --main-color: red;
+    --main-color-transparent-50: rgba(255, 0, 0, 0.5);
+    --background-color: rgb(50, 50, 50);
+    --background-color-darkest: rgba(30, 30, 30);
+}
+
+:root.light {
+    --text-color-white: black;
+    --main-color: white;
+    --main-color-transparent-50: rgba(50, 50, 50, 0.5);
+    --background-color: rgb(190, 190, 190);
+    --background-color-darkest: rgb(130, 130, 130);
+}
+
+:root.white {
+    --text-color-white: black;
+    --main-color: grey;
+    --main-color-transparent-50: rgba(0, 0, 0, 0.2);
+    --background-color: rgb(255, 255, 255);
+    --background-color-darkest: var(--background-color);
+}
