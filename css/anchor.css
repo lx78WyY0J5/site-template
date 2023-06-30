@@ -1,6 +1,6 @@
 :root {
     --distance: 20px;
-    --distance-anchor: 125px;
+    --distance-anchor: 15%;
 }
 
 .settings-toggle {
@@ -22,4 +22,7 @@
     right: var(--distance);
 }
 
-.anchor {}
+.anchor {
+    padding: 20px;
+    font-size: 30px;
+}

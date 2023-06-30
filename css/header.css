@@ -93,7 +93,7 @@ header>:last-child>div>h2 {
         position: relative;
     }
 
-    header>div>h1 {
+    header>div>a>h1 {
         margin-left: 20px;
         margin-right: 20px;
     }
@@ -113,7 +113,7 @@ header>:last-child>div>h2 {
         position: sticky;
     }
 
-    header>div>h1 {
+    header>div>a>h1 {
         margin-left: 30px;
         margin-right: 30px;
     }
