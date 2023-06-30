@@ -33,12 +33,12 @@ async function custom_pages_include() {
         pathname += "index.html";
     }
 
-    if (pathname === "/index.html" || pathname === "/site-template/") {
+    if (pathname === "/index.html") {
         await include("./html/contents/home.html", "content", true);
     }
 
 
-    else if (pathname === "/site-template/stats/") {
+    else if (pathname === "/stats/") {
         await include("./html/contents/home.html", "content", true);
     }
 
@@ -50,6 +50,7 @@ async function custom_pages_include() {
         await include("./html/contents/404.html", "content", true);
     } else {
         await include("./html/contents/404.html", "content", true);
+        //for other 404 custom page
     }
 }
 
