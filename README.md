@@ -1,7 +1,7 @@
 # https://lx78WyY0J5.github.io/
   
 Garbage web site for dev usage  
-    
+  
 ---
 
 ![](https://img.shields.io/github/commit-activity/m/lx78WyY0J5/lx78WyY0J5.github.io?color=red&style=for-the-badge)  
