@@ -1,26 +1,26 @@
 include_all();
 
 async function include_all() {
-    await include("./html/includes/head.html", "head", false);
-    await include_css("./css/variables.css");
-    await include_css("./css/user-agent.css");
-    await include_css("./css/text.css");
-    await include_css("./css/utils.css");
-    await include_css("./css/body.css");
+    await include("/html/includes/head.html", "head", false);
+    await include_css("/css/variables.css");
+    await include_css("/css/user-agent.css");
+    await include_css("/css/text.css");
+    await include_css("/css/utils.css");
+    await include_css("/css/body.css");
 
-    await include_css("./css/header.css");
-    await include("./html/includes/header.html", "body");
-    //await include_css("./css/menu.css");
-    //await include("./html/includes/menu.html", "header", true);
+    await include_css("/css/header.css");
+    await include("/html/includes/header.html", "body");
+    //await include_css("/css/menu.css");
+    //await include("/html/includes/menu.html", "header", true);
 
-    await include_css("./css/anchor.css");
-    await include("./html/includes/anchor.html", "body", false);
+    await include_css("/css/anchor.css");
+    await include("/html/includes/anchor.html", "body", false);
 
-    await include_css("./css/content.css");
-    await include("./html/includes/content.html", "body");
+    await include_css("/css/content.css");
+    await include("/html/includes/content.html", "body");
 
-    await include_css("./css/footer.css");
-    await include("./html/includes/footer.html", "body", false);
+    await include_css("/css/footer.css");
+    await include("/html/includes/footer.html", "body", false);
 
 
     await custom_pages_include();
@@ -34,22 +34,22 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index.html") {
-        await include("./html/contents/home.html", "content", true);
+        await include("/html/contents/home.html", "content", true);
     }
 
 
     else if (pathname === "/stats/") {
-        await include("./html/contents/home.html", "content", true);
+        await include("/html/contents/home.html", "content", true);
     }
 
-    /*else if (pathname.startsWith("/...../")) {
+    /*else if (pathname.startsWith("/..../")) {
 
     }*/
 
     else if (pathname === "/404.html" || pathname === "/404" || pathname === "/404/") {
-        await include("./html/contents/404.html", "content", true);
+        await include("/html/contents/404.html", "content", true);
     } else {
-        await include("./html/contents/404.html", "content", true);
+        await include("/html/contents/404.html", "content", true);
         //for other 404 custom page
     }
 }
