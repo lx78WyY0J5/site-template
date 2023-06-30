@@ -37,16 +37,31 @@ async function custom_pages_include() {
         await include("/html/contents/home.html", "content", true);
     }
 
-
-    else if (pathname === "/stats/") {
-        await include("/html/contents/home.html", "content", true);
+    else if (pathname === "/discord/" || pathname === "/discord.html/") {
     }
 
-    /*else if (pathname.startsWith("/..../")) {
+    else if (pathname === "/discuter/" || pathname === "/discuter.html/") {
+    }
 
-    }*/
+    else if (pathname === "/github/" || pathname === "/github.html/") {
+    }
 
-    else if (pathname === "/404.html" || pathname === "/404" || pathname === "/404/") {
+    else if (pathname === "/jeux/" || pathname === "/jeux.html/") {
+    }
+
+    else if (pathname === "/stats/" || pathname === "/stats.html/") {
+    }
+
+    else if (pathname === "/homepage/" || pathname === "/homepage.html/") {
+    }
+
+    else if (pathname === "/techno/" || pathname === "/techno.html/") {
+    }
+
+
+    /*else if (pathname.startsWith("/..../")) {    }*/
+
+    else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
         await include("/html/contents/404.html", "content", true);
     } else {
         await include("/html/contents/404.html", "content", true);
