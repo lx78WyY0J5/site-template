@@ -32,6 +32,8 @@
 }
 
 .submenu {
+    z-index: 1001 !important;
+
     display: none;
     animation: 0.3s ease-in-out forwards 0s animationAnchor;
 
@@ -41,6 +43,10 @@
     text-align: center;
     right: 45px;
     top: -0px;
+}
+
+.submenu.card {
+    min-width: max-content;
 }
 
 .anchor:hover .submenu,
@@ -75,6 +81,9 @@
     margin: 20px;
 }
 
+/*
+Music
+*/
 .music>.submenu>div>p:hover {
     transform: scale(1.2);
     transition: 0.3s;
@@ -95,6 +104,28 @@
     max-height: 128px;
 }
 
-.submenu.card {
-    min-width: max-content;
+/*
+Theme
+*/
+:root.black .theme>.submenu>.black,
+:root.dark .theme>.submenu>.dark,
+:root.white .theme>.submenu>.white,
+:root.light .theme>.submenu>.light {
+    color: var(--main-color);
+}
+
+.theme>.submenu>.black:hover,
+.theme>.submenu>.dark:hover,
+.theme>.submenu>.light:hover,
+.theme>.submenu>.white:hover {
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.theme>.submenu>.black:active,
+.theme>.submenu>.dark:active,
+.theme>.submenu>.light:active,
+.theme>.submenu>.white:active {
+    transform: scale(1.5);
+    transition: 0.5s;
 }
