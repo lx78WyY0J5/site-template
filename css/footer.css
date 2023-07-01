@@ -25,11 +25,6 @@ footer>div>p {
 
 /*Mobile*/
 @media (max-width: 767px) {
-
-    footer {
-        position: relative;
-    }
-
     footer>:first-child {
         text-align: left;
         margin-left: 20px;
@@ -46,10 +41,6 @@ footer>div>p {
 
 /*PC*/
 @media (min-width: 768px) {
-    footer {
-        position: sticky;
-    }
-
     footer>:first-child {
         float: left;
         margin-left: 50px;
@@ -63,5 +54,18 @@ footer>div>p {
     footer>div>p {
         margin-left: 10px;
         margin-right: 10px;
+    }
+}
+
+/*Footer Sticky or relative*/
+@media (max-height:1023px) {
+    footer {
+        position: relative;
+    }
+}
+
+@media (min-height:1024px) {
+    footer {
+        position: sticky;
     }
 }

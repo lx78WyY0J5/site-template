@@ -89,10 +89,6 @@ header>:last-child>div>h2 {
 
 /*Mobile*/
 @media (max-width: 767px) {
-    header {
-        position: relative;
-    }
-
     header>div>a>h1 {
         margin-left: 20px;
         margin-right: 20px;
@@ -109,10 +105,6 @@ header>:last-child>div>h2 {
 
 /*PC*/
 @media (min-width: 768px) {
-    header {
-        position: sticky;
-    }
-
     header>div>a>h1 {
         margin-left: 30px;
         margin-right: 30px;
@@ -120,5 +112,18 @@ header>:last-child>div>h2 {
 
     header>div {
         display: inline-block;
+    }
+}
+
+/*Header Sticky or relative*/
+@media (max-height:1023px) {
+    header {
+        position: relative;
+    }
+}
+
+@media (min-height:1024px) {
+    header {
+        position: sticky;
     }
 }
