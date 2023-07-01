@@ -13,11 +13,11 @@ async function include_all() {
     //await include_css("/css/menu.css");
     //await include("/html/includes/menu.html", "header", true);
 
-    await include_css("/css/anchor.css");
-    await include("/html/includes/anchor.html", "body", false);
-
     await include_css("/css/content.css");
     await include("/html/includes/content.html", "body");
+
+    await include_css("/css/anchor.css");
+    await include("/html/includes/anchor.html", "content", true);
 
     await include_css("/css/footer.css");
     await include("/html/includes/footer.html", "body", false);
