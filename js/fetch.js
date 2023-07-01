@@ -19,6 +19,7 @@ async function include_all() {
 
     await include_css("/css/anchor.css");
     await include("/html/includes/anchor.html", "content", true);
+    await include_script("/js/music.js");
 
     await include_css("/css/footer.css");
     await include("/html/includes/footer.html", "body", false);
@@ -29,7 +30,6 @@ async function include_all() {
 
 async function custom_pages_include() {
     var pathname = window.location.pathname;
-    console.log(pathname);
     if (pathname == "/") {
         pathname += "index.html";
     }

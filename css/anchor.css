@@ -16,7 +16,7 @@
 }
 
 .bot {
-    margin-top: 45vh;
+    margin-top: 55vh;
 }
 
 .theme {
@@ -69,8 +69,9 @@
     }
 }
 
-.anchor:active~.anchor,
-.anchor:hover~.anchor {
+/*Hide other anchor on hover / click*/
+.anchor.hidder:active~.anchor.hidder,
+.anchor.hidder:hover~.anchor.hidder {
     filter: opacity(0.3);
 }
 
@@ -102,6 +103,20 @@ Music
 
     min-height: 64px;
     max-height: 128px;
+}
+
+.music>.submenu>.hidder>p {
+    opacity: 0.25;
+    filter: grayscale(1);
+}
+
+.music>.submenu>.hidder>p.clicked {
+    opacity: 1;
+    filter: grayscale(0);
+}
+
+.music>.submenu>div>.hidden {
+    display: none;
 }
 
 /*

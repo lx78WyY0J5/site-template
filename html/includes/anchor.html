@@ -1,5 +1,5 @@
 <div class="main-anchor">
-    <div class="anchor settings card-red-effect">
+    <div class="anchor hidder settings card-red-effect">
         <p>⚙️</p>
         <div class="submenu card">
             <p>⚙️</p>
@@ -10,27 +10,45 @@
 
         </div>
     </div>
-    <div class="anchor music card-red-effect">
+    <div class="anchor hidder music card-red-effect">
         <p>🎶</p>
         <div class="submenu card">
             <p>🎶</p>
             <h2> Musique</h2>
+            <audio id="music-audio" preload="none" src=""></audio>
             <div>
-                <p>⏪</p>
-                <p>⏸</p>
-                <p>▶️</p>
-                <p>⏩</p>
+                <p id="music-now-playing">0</p>
+                <p>/</p>
+                <p id="music-now-playing-total">0</p>
             </div>
             <div>
-                <p>🔊</p>
-                <p>🔉</p>
-                <p>🔈</p>
-                <p>🔇</p>
+                <p id="music-track-name">[Nom]</p>
+                <p style="white-space:break-spaces;">, </p>
+                <p id="music-track-artist">[NOM]</p>
             </div>
-            <img src="" alt="">
+            <div>
+                <p onclick="prevTrack();">⏪</p>
+                <p id="audio-pause" onclick="setState('pause')">⏸</p>
+                <p id="audio-play" onclick="setState('play')">▶️</p>
+                <p onclick="nextTrack();">⏩</p>
+            </div>
+            <div class="hidder">
+                <p id="audio-max" onclick="setVolume('max');">🔊</p>
+                <p id="audio-med" onclick="setVolume('med');">🔉</p>
+                <p id="audio-min" onclick="setVolume('min');">🔈</p>
+            </div>
+            <div class="hidder">
+                <p id="audio-mute" onclick="setVolume('mute');">🔇</p>
+            </div>
+            <img id="music-track-art" src="" alt="">
+            <div>
+                <p id="music-current-time">00:00</p>
+                <p>/</p>
+                <p id="music-total-duration">00:00</p>
+            </div>
         </div>
     </div>
-    <div class="anchor theme card-red-effect">
+    <div class="anchor hidder theme card-red-effect">
         <p>🌙</p>
         <div class="submenu card">
             <p>🌙</p>
