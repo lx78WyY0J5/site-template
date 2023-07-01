@@ -4,6 +4,7 @@ async function include_all() {
     await include("/html/includes/head.html", "head", false);
     await include_css("/css/variables.css");
     await include_css("/css/user-agent.css");
+    await include_script("/js/theme.js");
     await include_css("/css/text.css");
     await include_css("/css/utils.css");
     await include_css("/css/body.css");
