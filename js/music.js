@@ -14,22 +14,64 @@ let curr_track = document.getElementById('music-audio');
 
 let track_list = [
     {
-        name: "SNCF",
-        artist: "J'sais pas",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/2560px-Logo_SNCF_2011.svg.png",
-        path: "https://universal-soundbank.com/sounds/22296.mp3"
-    },
-    {
         name: "Fôret",
         artist: "lasonotheque.org",
-        image: "https://images.unsplash.com/photo-1590273466070-40c466b4432d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z3JlZW4lMjBmb3Jlc3R8ZW58MHx8MHx8fDA%3D&w=1000&q=80",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0100.mp3"
+    },
+    {
+        name: "Vagues",
+        artist: "lasonotheque.org",
+        image: "",
         path: "https://lasonotheque.org/UPLOAD/mp3/0267.mp3"
     },
     {
-        name: "Thermodynamique",
-        artist: "J'sais pas ptdr",
-        image: "https://www.w3schools.com/images/colorpicker2000.png",
-        path: "http://techslides.com/demos/samples/sample.mp3"
+        name: "Vent",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0595.mp3"
+    },
+    {
+        name: "Campagne",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0097.mp3"
+    },
+    {
+        name: "Pluie et Orage sous tente",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0820.mp3"
+    },
+    {
+        name: "Réveil des oiseaux",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0999.mp3"
+    },
+    {
+        name: "Petit ruisseau",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/1354.mp3"
+    },
+    {
+        name: "Discussions extérieures",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/2968.mp3"
+    },
+    {
+        name: "Vent, herbes hautes",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0908.mp3"
+    },
+    {
+        name: "Pluie et orage",
+        artist: "lasonotheque.org",
+        image: "",
+        path: "https://lasonotheque.org/UPLOAD/mp3/0740.mp3"
     },
 ];
 
