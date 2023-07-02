@@ -119,11 +119,13 @@ function setState(StateName) {
     element.classList.add("hidden");
 }
 
-function setTrack(trackIndex) {
+function setTrack(trackIndex, autoPlay) {
     localStorage.setItem('music-current-track-index', trackIndex);
     track_index = trackIndex;
     loadTrack(track_index);
-    setState("play");
+    if (autoPlay) {
+        setState("play");
+    }
 }
 
 function playTrack() {
@@ -140,16 +142,14 @@ function nextTrack() {
     if (track_index < track_list.length - 1)
         track_index = track_index + parseInt(1);
     else track_index = 0;
-    setTrack(track_index);
-    playTrack();
+    setTrack(track_index, true);
 }
 
 function prevTrack() {
     if (track_index > 0)
         track_index = track_index - parseInt(1);
     else track_index = track_list.length - 1;
-    setTrack(track_index);
-    playTrack();
+    setTrack(track_index, true);
 }
 
 function loadTrack(track_index) {
@@ -174,7 +174,6 @@ function loadTrack(track_index) {
 
     seekUpdate();
 
-    console.log("ok");
     updateTimer = setInterval(seekUpdate, 500);
 
     curr_track.addEventListener("ended", nextTrack);
@@ -232,7 +231,7 @@ function seekUpdate() {
 
 (function () {
     if (localStorage.getItem('music-state') === 'play') {
-        setState('play');
+        setState('pause');
     } else if (localStorage.getItem('music-state') === 'pause') {
         setState('pause');
     } else {
@@ -242,8 +241,8 @@ function seekUpdate() {
 
 (function () {
     if (localStorage.getItem('music-current-track-index') != null) {
-        setTrack(localStorage.getItem('music-current-track-index'));
+        setTrack(localStorage.getItem('music-current-track-index'), false);
     } else {
-        setTrack(0);
+        setTrack(0, false);
     }
 })(); 
