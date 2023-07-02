@@ -11,42 +11,65 @@
     padding-right: 80px;
 }
 
-.top {
-    bottom: -50px;
-}
-
-.bot {
-    margin-top: 55vh;
-}
-
-.theme {
-    margin-top: 30vh;
+.settings {
+    margin-top: 0vh;
 }
 
 .music {
     margin-top: 15vh;
 }
 
-.settings {
-    margin-top: 0vh;
+.videos {
+    margin-top: 30vh;
+}
+
+.theme {
+    margin-top: 45vh;
+}
+
+.bot {
+    margin-top: 70vh;
+}
+
+.top {
+    bottom: -50px;
 }
 
 .submenu {
-    z-index: 1001 !important;
-
+    z-index: 1002 !important;
     display: none;
-    animation: 0.3s ease-in-out forwards 0s animationAnchor;
 
-    position: absolute;
+    animation: 0.3s ease-in-out forwards 0s animationAnchor;
 
     background-color: var(--background-color-darkest);
     text-align: center;
-    right: 45px;
-    top: -0px;
 }
 
-.submenu.card {
-    min-width: max-content;
+/*Mobile*/
+@media (max-width: 767px) {
+    .submenu {
+        max-width: 70vw;
+        position: absolute;
+
+        right: 15px;
+        top: -10px;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/*PC*/
+@media (min-width: 768px) {
+    .submenu {
+        min-width: max-content;
+        position: absolute;
+        right: 35px;
+        top: -100px;
+
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 .anchor:hover .submenu,
@@ -106,7 +129,7 @@ Music
 }
 
 .music>.submenu>.hidder>p {
-    opacity: 0.25;
+    opacity: 0.35;
     filter: grayscale(1);
 }
 
@@ -144,3 +167,7 @@ Theme
     transform: scale(1.5);
     transition: 0.5s;
 }
+
+/*
+videos
+*/
