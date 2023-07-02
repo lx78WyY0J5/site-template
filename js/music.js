@@ -235,7 +235,7 @@ function seekUpdate() {
     } else if (localStorage.getItem('music-state') === 'pause') {
         setState('pause');
     } else {
-        setState('play');
+        setState('pause');//Google block DOM to autoplay while website isn't trusted
     }
 })();
 
