@@ -65,7 +65,7 @@
         min-width: max-content;
         position: absolute;
         right: 35px;
-        top: -100px;
+        top: -20px;
 
         padding-left: 50px;
         padding-right: 50px;
@@ -95,7 +95,7 @@
 /*Hide other anchor on hover / click*/
 .anchor.hidder:active~.anchor.hidder,
 .anchor.hidder:hover~.anchor.hidder {
-    filter: opacity(0.3);
+    filter: opacity(0.5);
 }
 
 .submenu>div {
@@ -171,3 +171,10 @@ Theme
 /*
 videos
 */
+
+/*
+Paramètre
+*/
+.settings>.submenu>div>p {
+    display: block;
+}
