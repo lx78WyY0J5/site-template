@@ -27,7 +27,8 @@ header>:last-child>div>h2 {
     display: inline-block;
 }
 
-.subnav-content>a,.subnav-content>div>a {
+.subnav-content>a,
+.subnav-content>div>a {
     display: block;
     padding: 10px;
 }
@@ -45,7 +46,8 @@ header>:last-child>div>h2 {
     padding: 10px;
 }
 
-.subnav-content>a:hover {
+.subnav-content>a:hover,
+.subnav-content>div>a:hover {
     animation: 1s ease-in-out 0s infinite alternate animation;
 }
 
