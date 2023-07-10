@@ -27,33 +27,42 @@ async function include_all() {
 
 async function custom_pages_include() {
     var pathname = window.location.pathname;
+    console.log(pathname);
+
     if (pathname == "/") {
-        pathname += "index.html";
+        pathname += "index.html"; console.log("index / rewrite");
     }
 
     if (pathname === "/index.html") {
-        await include("/html/contents/home.html", "content", true);
+        await include("/html/contents/home.html", "content", true); console.log("/index.html");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord.html/") {
+        console.log("discord");
     }
 
     else if (pathname === "/discuter/" || pathname === "/discuter.html/") {
+        console.log("discuter");
     }
 
     else if (pathname === "/github/" || pathname === "/github.html/") {
+        console.log("github");
     }
 
     else if (pathname === "/jeux/" || pathname === "/jeux.html/") {
+        console.log("jeux");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats.html/") {
+        console.log("stats");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage.html/") {
+        console.log("homepage");
     }
 
     else if (pathname === "/techno/" || pathname === "/techno.html/") {
+        console.log("Techno");
     }
 
 
@@ -61,9 +70,11 @@ async function custom_pages_include() {
 
     else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
         await include("/html/contents/404.html", "content", true);
+        console.log("404");
     } else {
         await include("/html/contents/404.html", "content", true);
         //for other 404 custom page
+        console.log("404 custom");
     }
 }
 
