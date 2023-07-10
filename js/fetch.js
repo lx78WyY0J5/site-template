@@ -33,35 +33,35 @@ async function custom_pages_include() {
         pathname += "index.html"; console.log("index / rewrite");
     }
 
-    if (pathname === "/index.html") {
+    if (pathname === "/index.html" || pathname === "/index/" || pathname === "/index" || pathname === "/index.html/") {
         await include("/html/contents/home.html", "content", true); console.log("/index.html");
     }
 
-    else if (pathname === "/discord/" || pathname === "/discord.html/") {
+    else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/") {
         console.log("discord");
     }
 
-    else if (pathname === "/discuter/" || pathname === "/discuter.html/") {
+    else if (pathname === "/discuter/" || pathname === "/discuter" || pathname === "/discuter.html/") {
         console.log("discuter");
     }
 
-    else if (pathname === "/github/" || pathname === "/github.html/") {
+    else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/") {
         console.log("github");
     }
 
-    else if (pathname === "/jeux/" || pathname === "/jeux.html/") {
+    else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/") {
         console.log("jeux");
     }
 
-    else if (pathname === "/stats/" || pathname === "/stats.html/") {
+    else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/") {
         console.log("stats");
     }
 
-    else if (pathname === "/homepage/" || pathname === "/homepage.html/") {
+    else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/") {
         console.log("homepage");
     }
 
-    else if (pathname === "/techno/" || pathname === "/techno.html/") {
+    else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/") {
         console.log("Techno");
     }
 
