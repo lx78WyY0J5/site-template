@@ -53,6 +53,10 @@ async function custom_pages_include() {
         console.log("jeux");
     }
 
+    else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/") {
+        console.log("films");
+    }
+
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/") {
         console.log("stats");
     }
