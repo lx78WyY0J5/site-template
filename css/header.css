@@ -38,7 +38,12 @@ header>:last-child>div>h2 {
     position: absolute;
 
     background-color: var(--background-color-darkest);
-    vertical-align: left;
+}
+
+.subnav-content:has(.right, .left) {
+    min-width: fit-content;
+    right: 5%;
+    left: 5%;
 }
 
 .subnav,
@@ -62,7 +67,10 @@ header>:last-child>div>h2 {
     }
 }
 
-.subnav:hover .subnav-content {
+.subnav:hover .subnav-content,
+.subnav:active .subnav-content,
+.subnav:focus .subnav-content,
+.subnav:focus-within .subnav-content {
     display: block;
 
     border-radius: 20px;
@@ -100,8 +108,14 @@ header>:last-child>div>h2 {
         display: block;
     }
 
-    header>:last-child>:first-child {
-        margin-left: 15px;
+    header>:last-child {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .subnav-content>.left,
+    .subnav-content>.right {
+        display: block;
     }
 }
 
@@ -112,8 +126,22 @@ header>:last-child>div>h2 {
         margin-right: 30px;
     }
 
+    header>:last-child {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
     header>div {
         display: inline-block;
+    }
+
+    .subnav-content>.left {
+        float: left;
+    }
+
+    .subnav-content>.right {
+        float: right;
+        margin-left: 40px;
     }
 }
 

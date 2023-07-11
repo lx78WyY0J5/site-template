@@ -2,6 +2,11 @@
     color: var(--main-color);
 }
 
+:focus {
+    outline-color: var(--main-color-transparent);
+    outline-style: solid;
+}
+
 html {
     cursor: help;
 }

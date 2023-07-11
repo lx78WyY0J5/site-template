@@ -1,6 +1,6 @@
 <div class="main-anchor">
 
-    <div class="anchor hidder settings card-red-effect">
+    <div class="anchor hidder settings card-red-effect" tabindex="0">
         <p>⚙️</p>
         <div class="submenu card">
             <p>⚙️</p>
@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="anchor hidder music card-red-effect">
+    <div class="anchor hidder music card-red-effect" tabindex="0">
         <p>🎶</p>
         <div class="submenu card">
             <p>🎶</p>
@@ -34,18 +34,18 @@
                 <p id="music-track-artist">[NOM]</p>
             </div>
             <div>
-                <p onclick="prevTrack();">⏪</p>
-                <p id="audio-pause" onclick="setState('pause')">⏸</p>
-                <p id="audio-play" onclick="setState('play')">▶️</p>
-                <p onclick="nextTrack();">⏩</p>
+                <p tabindex="0" onclick="prevTrack();" onkeypress="prevTrack();">⏪</p>
+                <p tabindex="0" id="audio-pause" onclick="setState('pause');" onkeypress="setState('pause');">⏸</p>
+                <p tabindex="0" id="audio-play" onclick="setState('play');" onkeypress="setState('play');">▶️</p>
+                <p tabindex="0" onclick="nextTrack();" onkeypress="nextTrack();">⏩</p>
             </div>
             <div class="hidder">
-                <p id="audio-max" onclick="setVolume('max');">🔊</p>
-                <p id="audio-med" onclick="setVolume('med');">🔉</p>
-                <p id="audio-min" onclick="setVolume('min');">🔈</p>
+                <p tabindex="0" id="audio-max" onclick="setVolume('max');" onkeypress="setVolume('max');">🔊</p>
+                <p tabindex="0" id="audio-med" onclick="setVolume('med');" onkeypress="setVolume('med');">🔉</p>
+                <p tabindex="0" id="audio-min" onclick="setVolume('min');" onkeypress="setVolume('min');">🔈</p>
             </div>
             <div class="hidder">
-                <p id="audio-mute" onclick="setVolume('mute');">🔇</p>
+                <p tabindex="0" id="audio-mute" onclick="setVolume('mute');" onkeypress="setVolume('mute');">🔇</p>
             </div>
             <img id="music-track-art" src="" alt="">
             <div>
@@ -56,32 +56,33 @@
         </div>
     </div>
 
-    <div class="anchor hidder videos card-red-effect">
+    <div class="anchor hidder videos card-red-effect" tabindex="0">
         <p>📺</p>
-        <div class="submenu card">
+        <div tabindex="0" class="submenu card">
             <p>📺</p>
             <h2>Vidéos</h2>
             <div>
-                <iframe src="https://www.youtube.com/embed/playlist?list=RDAOjOqd406XyP0F6g0c9vV9Cg"
+                <iframe tabindex="0" src="https://www.youtube.com/embed/playlist?list=RDAOjOqd406XyP0F6g0c9vV9Cg"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>
+                  <div tabindex="0"></div>
                 </iframe>
             </div>
 
         </div>
     </div>
 
-    <div class="anchor hidder theme card-red-effect">
+    <div class="anchor hidder theme card-red-effect" tabindex="0">
         <p>🌙</p>
         <div class="submenu card">
             <p>🌙</p>
             <h2>Thèmes</h2>
-            <p class="black" onclick="setTheme('black');">🌑 Black</p>
-            <p class="dark" onclick="setTheme('dark');">🌓 Dark</p>
-            <p class="light" onclick="setTheme('light');">🌔 Light</p>
+            <p tabindex="0" class="black" onkeypress="setTheme('black');" onclick="setTheme('black');">🌑 Black</p>
+            <p tabindex="0" class="dark" onkeypress="setTheme('dark');" onclick="setTheme('dark');">🌓 Dark</p>
+            <p tabindex="0" class="light" onkeypress="setTheme('light');" onclick="setTheme('light');">🌔 Light</p>
             <br>
-            <p class="white" onclick="setTheme('white');">🌕 White</p>
+            <p tabindex="0" class="white" onkeypress="setTheme('white');" onclick="setTheme('white');">🌕 White</p>
             <p>Attention aux yeux !</p>
         </div>
     </div>

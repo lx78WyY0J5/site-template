@@ -73,7 +73,9 @@
 }
 
 .anchor:hover .submenu,
-.anchor:active .submenu {
+.anchor:active .submenu,
+.anchor:focus .submenu,
+.anchor:focus-within .submenu {
     display: block;
     animation: 0.6s ease-in-out forwards 0s animationAnchor;
 }
