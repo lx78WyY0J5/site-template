@@ -1,0 +1,26 @@
+#pageAuthor {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+#pageCommit {
+    font-size: larger;
+    text-decoration: underline;
+}
+
+#pageDate {
+    font-size: larger;
+}
+
+#pageMessage {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#splitter {
+    padding: 12px;
+    font-size: x-large;
+    font-weight: bolder;
+    color: var(--main-color);
+}

@@ -34,6 +34,7 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
+        await include_github_update();
         await include("/html/contents/home.html", "content", true);
         console.log("/index.html");
     }
@@ -47,6 +48,7 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
+        await include_github_update();
         console.log("github");
     }
 
@@ -59,14 +61,17 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
+        await include_github_update();
         console.log("stats");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
+        await include_github_update();
         console.log("homepage");
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
+        await include_github_update();
         await include_css("/css/techno.css");
         await include("/html/contents/techno.html", "content", true);
         console.log("Techno");
@@ -82,12 +87,20 @@ async function custom_pages_include() {
 
     else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
         await include("/html/contents/404.html", "content", true);
+        await include_github_update();
         console.log("404");
     } else {
         await include("/html/contents/404.html", "content", true);
         //for other 404 custom page
+        await include_github_update();
         console.log("404 custom");
     }
+}
+
+async function include_github_update() {
+    await include("/html/contents/github_update.html", "content", true);
+    await include_css("/css/github_update.css")
+    await include_script("/js/github_update.js");
 }
 
 async function include(link, query, queryOrIndex) {
