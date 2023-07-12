@@ -1,0 +1,25 @@
+.techno>:first-child>p,
+.techno>:first-child>h1 {
+    display: inline;
+}
+
+.techno>:first-child>p {
+    font-size: 32px;
+    padding-right: 12px;
+}
+
+.techno>:first-child {
+    padding-bottom: 24px;
+}
+
+.techno>:last-child {
+    font-size: x-large;
+}
+
+.techno>:last-child>p {
+    padding-bottom: 5px;
+}
+
+.techno {
+    padding: 50px;
+}
