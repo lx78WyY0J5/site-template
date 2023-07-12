@@ -49,6 +49,7 @@ header>:last-child>div>h2 {
 .subnav,
 .subnav-content {
     padding: 10px;
+    text-align: center;
 }
 
 .subnav-content>a:hover,
@@ -114,6 +115,7 @@ header>:last-child>div>h2 {
     }
 
     .subnav-content>.left,
+    .subnav-content>.center,
     .subnav-content>.right {
         display: block;
     }
@@ -135,13 +137,21 @@ header>:last-child>div>h2 {
         display: inline-block;
     }
 
-    .subnav-content>.left {
-        float: left;
+
+    .subnav-content>.left,
+    .subnav-content>.center,
+    .subnav-content>.right {
+        display: inline-block;
     }
 
-    .subnav-content>.right {
-        float: right;
-        margin-left: 40px;
+    .left,
+    .right,
+    .center {
+        justify-content: space-evenly;
+        vertical-align: middle;
+
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
