@@ -34,7 +34,8 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index.html" || pathname === "/index/" || pathname === "/index" || pathname === "/index.html/") {
-        await include("/html/contents/home.html", "content", true); console.log("/index.html");
+        await include("/html/contents/home.html", "content", true);
+        console.log("/index.html");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/") {
