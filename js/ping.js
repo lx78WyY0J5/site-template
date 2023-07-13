@@ -1,4 +1,16 @@
-ping("https", "lx78WyY0J5.github.io", 443);
+run();
+function run() {
+    return new Promise(async (resolve, reject) => {
+        ping("https", "lx78WyY0J5.github.io", 443);
+
+        setInterval(() => {
+            setTimeout(() => {
+                ping("https", "lx78WyY0J5.github.io", 443).then(resolve);
+            }, 500);
+        }, 500);
+    });
+}
+
 
 async function ping(prot, host, port) {
     document.getElementById("adress").textContent = prot + "://" + host + ":" + port;
