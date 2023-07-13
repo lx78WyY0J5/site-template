@@ -68,8 +68,8 @@ async function pageCommit() {
     var message = getValue(z, "message")
     document.getElementById("pageMessage").textContent = "💬 " + message;
 
-    var avatarGather = await gather('https://api.github.com/users/' + name);
-    var avatarGatherValue = getValue(avatarGather, "avatar_url");
+    var gatherAvatar = getValue(x[0], "author");
+    var avatarGatherValue = getValue(gatherAvatar, "avatar_url");
 
     document.getElementById("pageAuthorImage").src = avatarGatherValue;
 }
