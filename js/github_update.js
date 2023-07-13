@@ -67,4 +67,6 @@ async function pageCommit() {
 
     var message = getValue(z, "message")
     document.getElementById("pageMessage").textContent = "💬 " + message;
+
+    document.getElementById("pageAuthorImage").src = "https://avatars.githubusercontent.com/u/84735589?v=4";
 }
