@@ -22,6 +22,8 @@ async function ping(prot, host, port) {
     http.setRequestHeader("Content-Type", "application/json");
     http.setRequestHeader("X-Requested-With", "XMLHttpRequest");
     http.setRequestHeader("Accept", "application/json");
+    http.setRequestHeader("Access-Control-Allow-Origin", "*");
+    http.setRequestHeader('Access-Control-Allow-Headers', "*");
 
     http.addEventListener("error", function sendError() {
         document.getElementById("errorCode").textContent = "Code " + http.status;
