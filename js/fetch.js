@@ -71,9 +71,9 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
-        await include_github_update();
         await include_css("/css/techno.css");
         await include("/html/contents/techno.html", "content", true);
+        await include_github_update();
         console.log("Techno");
     }
 
