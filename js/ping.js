@@ -1,11 +1,13 @@
-ping("lx78WyY0J5.github.io", 443, "https://");
+ping("https", "ghub.fr", 443);
 
-async function ping(host, port, prot) {
-    document.getElementById("adress").textContent = prot + host + ":" + port;
+async function ping(prot, host, port) {
+    document.getElementById("adress").textContent = prot + "://" + host + ":" + port;
+    document.getElementById("adress").href = prot + "://" + host + ":" + port;
+
     var started = new Date().getTime();
     var http = new XMLHttpRequest();
 
-    http.open("GET", "https://" + host + ":" + port, true);
+    http.open("GET", prot + "://" + host + ":" + port, true);
     http.onreadystatechange = function () {
         if (http.readyState == http.DONE) {
             var ended = new Date().getTime();
