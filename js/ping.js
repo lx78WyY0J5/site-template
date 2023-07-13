@@ -1,4 +1,4 @@
-ping("https", "ghub.fr", 443);
+ping("https", "lx78WyY0J5.github.io", 443);
 
 async function ping(prot, host, port) {
     document.getElementById("adress").textContent = prot + "://" + host + ":" + port;
