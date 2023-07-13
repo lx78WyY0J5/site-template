@@ -1,0 +1,54 @@
+.ping_card {}
+
+#adress {
+    font-size: xx-large;
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+#adressSplitter {
+    font-size: large;
+    padding: 6px;
+}
+
+.ping_card>h1,
+#adress,
+#adressSplitter {
+    display: inline-block;
+}
+
+#timeHolder {
+    padding-top: 12px;
+    text-align: center;
+}
+
+#time {
+    font-size: xx-large;
+    color: var(--main-color);
+}
+
+#time,
+#timeUnit {
+    display: inline-block;
+}
+
+#timeUnit {
+    font-size: x-large;
+}
+
+
+#errorHolder {
+    padding-top: 16px;
+    text-align: center;
+}
+
+#errorCode,
+#errorCodeSplitter,
+#errorCodeDescription {
+    display: inline-block;
+    font-size: large;
+}
+
+#errorCode {
+    color: var(--main-color);
+}

@@ -61,11 +61,13 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
+        await include_ping();
         await include_github_update();
         console.log("stats");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
+        await include_ping();
         await include_github_update();
         console.log("homepage");
     }
@@ -101,6 +103,12 @@ async function include_github_update() {
     await include("/html/contents/github_update.html", "content", true);
     await include_css("/css/github_update.css")
     await include_script("/js/github_update.js");
+}
+
+async function include_ping() {
+    await include("/html/contents/ping.html", "content", true);
+    await include_css("/css/ping.css");
+    await include_script("/js/ping.js");
 }
 
 async function include(link, query, queryOrIndex) {
