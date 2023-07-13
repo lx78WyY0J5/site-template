@@ -12,3 +12,8 @@ Garbage web site for dev usage
 ![](https://img.shields.io/github/repo-size/lx78WyY0J5/lx78WyY0J5.github.io?color=red)  
 ![](https://img.shields.io/github/issues-raw/lx78WyY0J5/lx78WyY0J5.github.io)
 ![](https://img.shields.io/github/issues-closed-raw/lx78WyY0J5/lx78WyY0J5.github.io)
+
+---
+
+Total  ~  Unique  
+![](https://shields.io/endpoint?url=https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubioreadme.json&label=%F0%9F%91%80)  ~  ![](https://shields.io/endpoint?url=https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubioreadme.json&show=unique&label=%F0%9F%91%80)
