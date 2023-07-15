@@ -1,8 +1,9 @@
 setViewCount();
+
 async function setViewCount() {
 
-    var global = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json');
-    var globalHit = getValue(global[0], "message");
+    var global = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio');
+    /* var globalHit = getValue(global[0], "message");
     document.getElementById("total-number").textContent = globalHit;
 
     var globalUnique = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json?show=unique');
@@ -20,16 +21,20 @@ async function setViewCount() {
 
     var globalPageUnique = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio' + pathnameHTML + '.json?show=unique');
     var globalPageUniqueHit = getValue(globalPageUnique[0], "message");
-    document.getElementById("unique-total-page-number").textContent = globalPageUniqueHit;
+    document.getElementById("unique-total-page-number").textContent = globalPageUniqueHit; */
 }
 
 function gather(url) {
     return new Promise(function (resolve, reject) {
         setTimeout(() => {
-            fetch(url)
-                .then(response => response.json())
+            fetch(url, {
+                method: 'GET',
+                crossorigin: true,
+                mode: 'no-cors'
+            })
+                .then(response => console.log(response))
                 .then(data => {
-                    resolve(data);
+                    console.log(data);
                     return;
                 })
                 .catch(error => console.error(error))
@@ -47,4 +52,4 @@ function getValue(obj, key) {
         }
     }
     return value;
-}
+}  
