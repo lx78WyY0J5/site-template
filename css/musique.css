@@ -1,0 +1,9 @@
+.musique>iframe {
+    background-color: var(--background-color);
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    margin-top: 24px;
+}

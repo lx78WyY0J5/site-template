@@ -89,7 +89,7 @@ async function custom_pages_include() {
 
     else if (pathname === "/musique/" || pathname === "/musique" || pathname === "/musique.html/" || pathname === "/musique.html") {
         await include("/html/contents/musique.html", "content", true);
-
+        await include_css("/css/musique.css");
         console.log("musique");
     }
 
