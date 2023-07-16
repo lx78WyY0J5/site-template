@@ -1,15 +1,15 @@
 setViewCount();
 
 async function setViewCount() {
-    var global = await gather('https://hits.dwyl.com\/lx78wyy0j5\/lx78wyy0j5githubio.json');
+    var global = await gatherJSON('https://hits.dwyl.com\/lx78wyy0j5\/lx78wyy0j5githubio.json');
 
     console.log(global);
 
-    var global = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json');
+    var global = await gatherJSON('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json');
     var globalHit = getValue(global[0], "message");
     document.getElementById("total-number").textContent = globalHit;
 
-    var globalUnique = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json?show=unique');
+    var globalUnique = await gatherJSON('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json?show=unique');
     var globalUniqueHit = getValue(globalUnique[0], "message");
     document.getElementById("unique-total-number").textContent = globalUniqueHit;
 
@@ -18,16 +18,16 @@ async function setViewCount() {
     var pathnameDot = pathname.replace("/", ".");
     var pathnameHTML = pathnameDot.replace(".html", "");
 
-    var globalPage = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio' + pathnameHTML + '.json');
+    var globalPage = await gatherJSON('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio' + pathnameHTML + '.json');
     var globalPageHit = getValue(globalPage[0], "message");
     document.getElementById("total-page-number").textContent = globalPageHit;
 
-    var globalPageUnique = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio' + pathnameHTML + '.json?show=unique');
+    var globalPageUnique = await gatherJSON('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio' + pathnameHTML + '.json?show=unique');
     var globalPageUniqueHit = getValue(globalPageUnique[0], "message");
     document.getElementById("unique-total-page-number").textContent = globalPageUniqueHit;
 }
 
-function gather(url) {
+function gatherJSON(url) {
     return new Promise(function (resolve, reject) {
         setTimeout(() => {
             fetch(url, {
