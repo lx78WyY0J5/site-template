@@ -5,6 +5,9 @@ async function setViewCount() {
     var pathname = window.location.pathname;
     var pathnameDot = pathname.replace("/", ".");
     var pathnameHTML = pathnameDot.replace(".html", "");
+    if (pathnameHTML == "/") {
+        pathnameHTML = "/index";
+    }
 
     var globalPage = await getPromise("lx78wyy0j5/lx78wyy0j5.github.io" + pathnameHTML);
     document.getElementById("page-name").textContent = pathname.replace(".html", "");
