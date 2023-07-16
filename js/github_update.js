@@ -45,7 +45,6 @@ function github_update() {
 
 async function pageCommit() {
     var x = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/commits');
-    var deployment = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/deployments');
     var y = getValue(x[0], "sha");
     if (String(y).length >= 8) {
         var y2 = String(y.substring(0, 12) + "...");
@@ -73,8 +72,8 @@ async function pageCommit() {
     var avatarGatherValue = getValue(gatherAvatar, "avatar_url");
 
     document.getElementById("pageAuthorImage").src = avatarGatherValue;
-
-    /* deployment status */
+    
+    var deployment = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/deployments');
     var deploymentID = await getValue(deployment[0], "id");
 
     var deploymentStatus = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/deployments/' + deploymentID + '/statuses');
