@@ -1,25 +1,27 @@
 .viewCount {
-    text-align: justify;
+    text-align: center;
 }
 
 .viewCount>div>h2 {
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
-.viewCount>div>div>p {
+.viewCount>div>p {
     padding-left: 12px;
 }
 
-.viewCount>div>div>p {
+.viewCount>div>p,
+.viewCount>div>h2 {
     display: inline-block;
+    padding: 12px;
 }
 
-.viewCount>div>div>:first-child {
+.viewCount>div>:first-child {
     color: var(--main-color);
     font-size: xx-large;
     font-weight: bolder;
 }
 
-.viewCount>div>div>:last-child {
+.viewCount>div>:last-child {
     font-size: x-large;
 }
