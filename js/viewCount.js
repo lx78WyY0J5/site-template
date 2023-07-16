@@ -1,8 +1,11 @@
 setViewCount();
 
 async function setViewCount() {
+    var global = await gather('https://hits.dwyl.com\/lx78wyy0j5\/lx78wyy0j5githubio.json');
 
-    var global = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio');
+    console.log(global);
+
+    var global = await gather('https://hits.dwyl.com/lx78wyy0j5/lx78wyy0j5githubio.json');
     var globalHit = getValue(global[0], "message");
     document.getElementById("total-number").textContent = globalHit;
 
@@ -29,11 +32,13 @@ function gather(url) {
         setTimeout(() => {
             fetch(url, {
                 method: 'GET',
-                crossorigin: true,
-                mode: 'no-cors'
+                mode: 'cors',
+                headers: {
+                    "Content-Type": "application/json", 'Access-Control-Allow-Origin': '*',
+                },
             })
-                .then(response => console.log(response))
                 .then(data => {
+                    resolve(data);
                     console.log(data);
                     return;
                 })
