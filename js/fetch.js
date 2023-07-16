@@ -34,65 +34,60 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
-        await include_multiple("github_update", "content");
         await include_multiple("date", "content");
-
+        
         await include("/html/contents/home.html", "content", true);
 
-         await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "content");
+        await include_multiple("viewCount", "content");
 
         console.log("/index.html");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/" || pathname === "/discord.html") {
-         await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
         console.log("discord");
     }
 
     else if (pathname === "/discuter/" || pathname === "/discuter" || pathname === "/discuter.html/" || pathname === "/discuter.html") {
-         await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
         console.log("discuter");
     }
 
     else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
         await include_multiple("github_update", "content");
-
-         await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
         console.log("github");
     }
 
     else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/" || pathname === "/jeux.html") {
         console.log("jeux");
-         await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
     }
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
         console.log("films");
-         await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
-        await include_multiple("ping", "content");
         await include_multiple("github_update", "content");
-
         await include_multiple("viewCount", "content");
         console.log("stats");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
         await include_multiple("ping", "content");
-        await include_multiple("github_update", "content");
         await include_multiple("date", "content");
 
-       await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "content");
+        await include_multiple("viewCount", "content");
         console.log("homepage");
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
         await include_css("/css/techno.css");
         await include("/html/contents/techno.html", "content", true);
-
-        await include_multiple("github_update", "content");
 
         await include_multiple("viewCount", "content");
         console.log("Techno");
@@ -119,8 +114,6 @@ async function custom_pages_include() {
         await include("/html/contents/404.html", "content", true);
         //for other 404 custom page
         await include_multiple("github_update", "content");
-
-
         await include_multiple("viewCount", "content");
         console.log("404 custom");
     }
