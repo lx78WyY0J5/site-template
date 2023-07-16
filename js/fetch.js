@@ -39,36 +39,36 @@ async function custom_pages_include() {
 
         await include("/html/contents/home.html", "content", true);
 
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
 
         console.log("/index.html");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/" || pathname === "/discord.html") {
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
         console.log("discord");
     }
 
     else if (pathname === "/discuter/" || pathname === "/discuter" || pathname === "/discuter.html/" || pathname === "/discuter.html") {
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
         console.log("discuter");
     }
 
     else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
         await include_multiple("github_update", "content");
 
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
         console.log("github");
     }
 
     else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/" || pathname === "/jeux.html") {
         console.log("jeux");
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
     }
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
         console.log("films");
-        // await include_multiple("viewCount", "content");
+         await include_multiple("viewCount", "content");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
@@ -84,7 +84,7 @@ async function custom_pages_include() {
         await include_multiple("github_update", "content");
         await include_multiple("date", "content");
 
-        // await include_multiple("viewCount", "content");
+       await include_multiple("viewCount", "content");
         console.log("homepage");
     }
 
@@ -94,7 +94,7 @@ async function custom_pages_include() {
 
         await include_multiple("github_update", "content");
 
-        // await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
         console.log("Techno");
     }
 
@@ -102,7 +102,7 @@ async function custom_pages_include() {
         await include("/html/contents/musique.html", "content", true);
         await include_css("/css/musique.css");
 
-        // await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "content");
         console.log("musique");
     }
 
