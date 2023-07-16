@@ -75,11 +75,11 @@ async function pageCommit() {
 
     /* deployment status */
     var deployment = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/deployments');
-    var deploymentID = getValue(deployment[0], "id");
+    var deploymentID = await getValue(deployment[0], "id");
 
     var deploymentStatus = await gather('https://api.github.com/repos/lx78WyY0J5/lx78WyY0J5.github.io/deployments/' + deploymentID + '/statuses');
-    var deploymentStatusState = getValue(deploymentStatus[0], "state");
-    var deploymentStatusUrl = getValue(deploymentStatus[0], "url");
+    var deploymentStatusState = await getValue(deploymentStatus[0], "state");
+    var deploymentStatusUrl = await getValue(deploymentStatus[0], "url");
 
     document.getElementById("pageDeploymentStatus").href = deploymentStatusUrl;
     document.getElementById("pageDeploymentStatus").textContent = deploymentStatusState;
