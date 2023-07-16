@@ -32,9 +32,10 @@ function gather(url) {
         setTimeout(() => {
             fetch(url, {
                 method: 'GET',
-                mode: 'cors',
+                mode: 'no-cors',
                 headers: {
-                    "Content-Type": "application/json", 'Access-Control-Allow-Origin': '*',
+                    "Content-Type": "application/json",
+                    'Access-Control-Allow-Origin': '*',
                 },
             })
                 .then(data => {
