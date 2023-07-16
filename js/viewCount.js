@@ -3,10 +3,15 @@ async function setViewCount() {
     document.getElementById("global-viewcount").textContent = global;
 
     var pathname = window.location.pathname;
+
     var pathnameDot = pathname.replace("/", ".");
     var pathnameHTML = pathnameDot.replace(".html", "");
-    if (pathnameHTML == "/") {
-        pathnameHTML = "/index";
+    if (pathnameHTML == ".") {
+        pathnameHTML = ".index";
+    }
+    
+    if (pathname == "/") {
+        pathname = "/index"
     }
 
     var globalPage = await getPromise("lx78wyy0j5/lx78wyy0j5.github.io" + pathnameHTML);
