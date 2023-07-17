@@ -35,7 +35,7 @@ async function custom_pages_include() {
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
         await include_multiple("date", "content");
-        
+
         await include("/html/contents/home.html", "content", true);
 
         await include_multiple("github_update", "content");
@@ -66,8 +66,11 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
-        console.log("films");
+        await include("/html/contents/films.html", "content", true);
+        await include_css("/css/films.css");
+
         await include_multiple("viewCount", "content");
+        console.log("films");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
