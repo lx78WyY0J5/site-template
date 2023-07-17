@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.symbol-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+.symbol {
+    position: absolute;
+    color: #0f0;
+    font-size: 20px;
+    user-select: none;
+    animation: symbol-fall 2s linear infinite;
+}
+
+@keyframes symbol-fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}

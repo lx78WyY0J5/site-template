@@ -1,4 +1,4 @@
-include_all();
+custom_pages_include();
 
 async function include_all() {
     await include_css("/css/variables.css");
@@ -20,9 +20,6 @@ async function include_all() {
 
     await include_css("/css/footer.css");
     await include("/html/includes/footer.html", "body", false);
-
-
-    await custom_pages_include();
 }
 
 async function custom_pages_include() {
@@ -34,96 +31,101 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
+        await include_all();
         await include("/html/contents/home.html", "content", true);
 
         await include_multiple("viewCount", "content");
-
-        console.log("/index.html");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/" || pathname === "/discord.html") {
+        await include_all();
         await include_multiple("viewCount", "content");
-        console.log("discord");
     }
 
     else if (pathname === "/discuter/" || pathname === "/discuter" || pathname === "/discuter.html/" || pathname === "/discuter.html") {
+        await include_all();
         await include_multiple("viewCount", "content");
-        console.log("discuter");
     }
 
     else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
+        await include_all();
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
-        console.log("github");
     }
 
     else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/" || pathname === "/jeux.html") {
-        console.log("jeux");
+        await include_all();
+
         await include_multiple("viewCount", "content");
     }
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
+        await include_all();
         await include("/html/contents/films.html", "content", true);
         await include_css("/css/films.css");
 
         await include_multiple("viewCount", "content");
-        console.log("films");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
+        await include_all();
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
-        console.log("stats");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
+        await include_all();
         await include_multiple("ping", "content");
         await include_multiple("date", "content");
 
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
-        console.log("homepage");
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
+        await include_all();
         await include_css("/css/techno.css");
         await include("/html/contents/techno.html", "content", true);
 
         await include_multiple("viewCount", "content");
-        console.log("Techno");
     }
 
     else if (pathname === "/musique/" || pathname === "/musique" || pathname === "/musique.html/" || pathname === "/musique.html") {
+        await include_all();
         await include("/html/contents/musique.html", "content", true);
         await include_css("/css/musique.css");
 
         await include_multiple("viewCount", "content");
-        console.log("musique");
+    }
+
+    else if (pathname === "/matrice/" || pathname === "/matrice" || pathname === "/matrice.html/" || pathname === "/matrice.html") {
+        await include("/html/includes/content.html", "body");
+        await include_multiple("matrice", "content");
     }
 
 
     /*else if (pathname.startsWith("/..../")) {    }*/
 
     else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
+        await include_all();
         await include("/html/contents/404Custom.html", "content", true);
-        
+
         await include_css("/css/404.css");
 
         await include("/html/contents/poney.html", "content", true);
 
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
-        console.log("404");
     }
 
     else {
+        await include_all();
         await include("/html/contents/404.html", "content", true);
 
         await include_css("/css/404.css");
 
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
-        console.log("404 custom");
     }
 }
 
