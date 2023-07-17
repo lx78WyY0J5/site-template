@@ -1,0 +1,40 @@
+.customError {
+    text-align: center;
+    padding: 40px;
+}
+
+.ErrorPage {
+    padding: 50px;
+    text-align: center;
+}
+
+.ErrorPage>h1 {
+    display: inline;
+    color: red;
+}
+
+.ErrorPage>h1:first-of-type {
+    padding-right: 10px;
+}
+
+.ErrorPage>p {
+    font-size: 60px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.ErrorPage>a {
+    display: block;
+}
+
+.ErrorPage>a>h1,
+.ErrorPage>a>p,
+.customError>a>h1,
+.customError>a>p {
+    display: inline;
+}
+
+.ErrorPage>a>p,
+.customError>a>p {
+    font-size: 40px;
+}

@@ -34,11 +34,8 @@ async function custom_pages_include() {
     }
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
-        await include_multiple("date", "content");
-
         await include("/html/contents/home.html", "content", true);
 
-        await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
 
         console.log("/index.html");
@@ -108,14 +105,22 @@ async function custom_pages_include() {
     /*else if (pathname.startsWith("/..../")) {    }*/
 
     else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
-        await include("/html/contents/404.html", "content", true);
-        await include_multiple("github_update", "content");
+        await include("/html/contents/404Custom.html", "content", true);
+        
+        await include_css("/css/404.css");
 
+        await include("/html/contents/poney.html", "content", true);
+
+        await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
         console.log("404");
-    } else {
+    }
+
+    else {
         await include("/html/contents/404.html", "content", true);
-        //for other 404 custom page
+
+        await include_css("/css/404.css");
+
         await include_multiple("github_update", "content");
         await include_multiple("viewCount", "content");
         console.log("404 custom");
