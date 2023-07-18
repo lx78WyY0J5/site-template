@@ -16,16 +16,15 @@ body {
 
 .symbol {
     position: absolute;
-    color: #0f0;
     font-size: 20px;
     user-select: none;
-    animation: symbol-fall 2s linear infinite;
+    animation: symbol-fall 2s cubic-bezier(1, 2, 0, -2) infinite;
 }
 
 @keyframes symbol-fall {
     0% {
         transform: translateY(-100px);
-        opacity: 0;
+        opacity: 0.1;
     }
 
     100% {
