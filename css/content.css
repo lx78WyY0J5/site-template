@@ -7,3 +7,10 @@
     margin-left: 1vw;
     margin-right: 1vw;
 }
+
+#contentHolder {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}

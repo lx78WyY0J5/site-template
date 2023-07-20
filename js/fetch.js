@@ -15,7 +15,7 @@ async function include_all() {
     await include("/html/includes/content.html", "body");
 
     await include_css("/css/anchor.css");
-    await include("/html/includes/anchor.html", "content", true);
+    await include("/html/includes/anchor.html", "contentAnchor", true);
     await include_script("/js/music.js");
 
     await include_css("/css/footer.css");
@@ -32,75 +32,85 @@ async function custom_pages_include() {
 
     if (pathname === "/index/" || pathname === "/index" || pathname === "/index.html/" || pathname === "/index.html") {
         await include_all();
-        await include("/html/contents/home.html", "content", true);
 
-        await include_multiple("viewCount", "content");
+        await include("/html/contents/home.html", "contentHolder", true);
+
+        await include("/html/contents/matriceHolder.html", "contentHolder", true);
+        await include_multiple("matrice", "matriceHolder");
+
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/" || pathname === "/discord.html") {
         await include_all();
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/discuter/" || pathname === "/discuter" || pathname === "/discuter.html/" || pathname === "/discuter.html") {
         await include_all();
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
         await include_all();
-        await include_multiple("github_update", "content");
-        await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "contentHolder");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/" || pathname === "/jeux.html") {
         await include_all();
 
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
         await include_all();
-        await include("/html/contents/films.html", "content", true);
+        await include("/html/contents/films.html", "contentHolder", true);
         await include_css("/css/films.css");
 
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/stats/" || pathname === "/stats" || pathname === "/stats.html/" || pathname === "/stats.html") {
         await include_all();
-        await include_multiple("github_update", "content");
-        await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "contentHolder");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
         await include_all();
-        await include_multiple("ping", "content");
-        await include_multiple("date", "content");
+        
+        await include("/html/contents/matriceHolder.html", "contentHolder", true);
+        await include_multiple("matrice", "matriceHolder");
+        
+        await include_multiple("ping", "contentHolder");
+        await include_multiple("date", "contentHolder");
 
-        await include_multiple("github_update", "content");
-        await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "contentHolder");
+        await include_multiple("viewCount", "contentHolder");
+
+
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
         await include_all();
         await include_css("/css/techno.css");
-        await include("/html/contents/techno.html", "content", true);
+        await include("/html/contents/techno.html", "contentHolder", true);
 
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/musique/" || pathname === "/musique" || pathname === "/musique.html/" || pathname === "/musique.html") {
         await include_all();
-        await include("/html/contents/musique.html", "content", true);
+        await include("/html/contents/musique.html", "contentHolder", true);
         await include_css("/css/musique.css");
 
-        await include_multiple("viewCount", "content");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else if (pathname === "/matrice/" || pathname === "/matrice" || pathname === "/matrice.html/" || pathname === "/matrice.html") {
         await include("/html/includes/content.html", "body");
-        await include_multiple("matrice", "content");
+        await include_multiple("matrice", "contentHolder");
     }
 
 
@@ -108,24 +118,24 @@ async function custom_pages_include() {
 
     else if (pathname === "/404.html" || pathname === "/404.html/" || pathname === "/404" || pathname === "/404/") {
         await include_all();
-        await include("/html/contents/404Custom.html", "content", true);
+        await include("/html/contents/404Custom.html", "contentHolder", true);
 
         await include_css("/css/404.css");
 
-        await include("/html/contents/poney.html", "content", true);
+        await include("/html/contents/poney.html", "contentHolder", true);
 
-        await include_multiple("github_update", "content");
-        await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "contentHolder");
+        await include_multiple("viewCount", "contentHolder");
     }
 
     else {
         await include_all();
-        await include("/html/contents/404.html", "content", true);
+        await include("/html/contents/404.html", "contentHolder", true);
 
         await include_css("/css/404.css");
 
-        await include_multiple("github_update", "content");
-        await include_multiple("viewCount", "content");
+        await include_multiple("github_update", "contentHolder");
+        await include_multiple("viewCount", "contentHolder");
     }
 }
 
