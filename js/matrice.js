@@ -1,5 +1,5 @@
 var symbolContainer = document.querySelector(".symbol-container");
-const symbolCount = 1000;
+const symbolCount = 500;
 
 for (let i = 0; i < symbolCount; i++) {
     var symbol = document.createElement("div");
