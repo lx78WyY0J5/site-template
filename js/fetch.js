@@ -79,17 +79,15 @@ async function custom_pages_include() {
 
     else if (pathname === "/homepage/" || pathname === "/homepage" || pathname === "/homepage.html/" || pathname === "/homepage.html") {
         await include_all();
-        
+
         await include("/html/contents/matriceHolder.html", "contentHolder", true);
         await include_multiple("matrice", "matriceHolder");
-        
+
         await include_multiple("ping", "contentHolder");
         await include_multiple("date", "contentHolder");
 
         await include_multiple("github_update", "contentHolder");
         await include_multiple("viewCount", "contentHolder");
-
-
     }
 
     else if (pathname === "/techno/" || pathname === "/techno" || pathname === "/techno.html/" || pathname === "/techno.html") {
@@ -111,6 +109,11 @@ async function custom_pages_include() {
     else if (pathname === "/matrice/" || pathname === "/matrice" || pathname === "/matrice.html/" || pathname === "/matrice.html") {
         await include("/html/includes/content.html", "body");
         await include_multiple("matrice", "contentHolder");
+    }
+
+    else if (pathname === "/cookieclicker/" || pathname === "/cookieclicker" || pathname === "/cookieclicker.html/" || pathname === "/cookieclicker.html") {
+        await include("/html/includes/content.html", "body");
+        await include_multiple("cookieclicker", "contentHolder");
     }
 
 
