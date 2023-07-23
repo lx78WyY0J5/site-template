@@ -26,3 +26,7 @@
     font-size: xx-large;
     text-decoration: underline;
 }
+
+.films>div>div>p{
+    max-width: 250px;
+}

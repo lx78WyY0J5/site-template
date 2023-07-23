@@ -14,7 +14,7 @@ async function run() {
 async function getData(array, id) {
     for (let movieID in array) {
         var data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]); 
-        
+
         var div = document.createElement("div");
         div.className = "card-red-effect";
 
@@ -50,7 +50,7 @@ function gather(url) {
                     return;
                 })
                 .catch(error => console.error(error))
-        }, 1000);
+        }, 10000);
     });
 }
 
