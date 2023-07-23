@@ -9,7 +9,7 @@ async function setViewCount() {
     if (pathnameHTML == ".") {
         pathnameHTML = ".index";
     }
-    
+
     if (pathname == "/") {
         pathname = "/index"
     }
@@ -23,14 +23,13 @@ async function setViewCount() {
 }
 
 const getPromise = async (repo, callback) => {
-    let data = await fetch("https://visit-counter.vercel.app/counter?page=" + repo); console.log(data);
-    let value = await data.json(); console.log(value);
+    let data = await fetch("https://visit-counter.vercel.app/counter?page=" + repo);
+    let value = await data.json();
     return value;
 }
 
 const getActivity = async () => {
     let count = await getPromise(repo);
-    console.log("fin : " + count);
 }
 
 setViewCount();
