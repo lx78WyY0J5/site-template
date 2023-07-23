@@ -9,8 +9,6 @@ async function run() {
     await getData(series, ".seriesID");
 }
 
-
-
 async function getData(array, id) {
     for (let movieID in array) {
         var data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]);
@@ -24,6 +22,7 @@ async function getData(array, id) {
         div.appendChild(title);
 
         var img = document.createElement("img");
+        img.loading = "lazy";
         img.src = await getValue(data, "image");
         div.appendChild(img);
 
