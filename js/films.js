@@ -19,23 +19,20 @@ async function getData(array, id) {
         div.className = "card-red-effect";
 
         var title = document.createElement("a");
-        title.className = "title";
         title.textContent = await getValue(data, "title");
         title.href = await getValue(data, "imdb");
         div.appendChild(title);
 
         var img = document.createElement("img");
         img.src = await getValue(data, "image");
-        img.className = "movieImg"
         div.appendChild(img);
 
         var text = document.createElement("p");
-        text.className = "movieText";
         text.textContent = await getValue(data, "plot");
         div.appendChild(text);
 
         var divContainer = document.querySelector(id);
-        divContainer.appendChild(div);        
+        divContainer.appendChild(div);
     }
 }
 
