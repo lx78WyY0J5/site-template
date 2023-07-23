@@ -4,8 +4,8 @@ let series = ["tt1586680", "tt0898266", "tt6226232", "tt1475582"];
 
 run();
 async function run() {
-    await getData(anime, ".animesID");
     await getData(films, ".filmsID");
+    await getData(anime, ".animesID");
     await getData(series, ".seriesID");
 }
 
@@ -13,7 +13,7 @@ async function run() {
 
 async function getData(array, id) {
     for (let movieID in array) {
-        var data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]); 
+        var data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]);
 
         var div = document.createElement("div");
         div.className = "card-red-effect";
