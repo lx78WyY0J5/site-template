@@ -44,10 +44,15 @@ h1 {
 
 #cookie {
     position: absolute;
-    top: 15%;
+    top: 5%;
     left: 20%;
-    bottom: 20%;
+    bottom: 30%;
     right: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
 
 #cookie>img {
