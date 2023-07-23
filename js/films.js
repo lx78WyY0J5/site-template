@@ -45,7 +45,7 @@ function gather(url) {
                     return;
                 })
                 .catch(error => console.error(error))
-        }, 10000);
+        }, 5000);
     });
 }
 
