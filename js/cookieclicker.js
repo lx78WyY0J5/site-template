@@ -19,15 +19,35 @@ function getCookiePerClick() {
     return Number(localStorage.getItem("cookie-per-click"));
 }
 
-function upgradePerClick(cost, amountAdd) {
-    if (localStorage.getItem("cookie-amount") >= cost) {
-        localStorage.setItem("cookie-amount", Number(localStorage.getItem("cookie-amount")) - cost);
-        localStorage.setItem("cookie-per-click", Number(localStorage.getItem("cookie-per-click")) + amountAdd);
+function buyBonus(price) {
+    if (localStorage.getItem("cookie-amount") >= price) {
+        localStorage.setItem("cookie-amount", Number(localStorage.getItem("cookie-amount")) - price);
         updateStats();
+        return true;
     }
+    return false;
 }
 
 function updateStats() {
     document.getElementById("cookie-per-click").textContent = getCookiePerClick();
     document.getElementById("cookie-amount").textContent = getCookies();
+}
+
+function bonusClick(bonus) {
+    if (bonus == 1 && buyBonus(10)) {
+        localStorage.setItem("cookie-per-click", Number(localStorage.getItem("cookie-per-click")) + 1);
+        updateStats();
+    }
+
+    else if (bonus == 2) {
+
+    }
+
+    else if (bonus == 3) {
+
+    }
+
+    else if (bonus == 4) {
+
+    }
 }
