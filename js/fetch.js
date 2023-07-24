@@ -142,8 +142,8 @@ async function custom_pages_include() {
 }
 
 async function include_multiple(name, area) {
-    await include("/html/contents/" + name + ".html", area, true);
     await include_css("/css/" + name + ".css");
+    await include("/html/contents/" + name + ".html", area, true);
     await include_script("/js/" + name + ".js");
 }
 
