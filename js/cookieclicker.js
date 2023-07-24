@@ -55,13 +55,16 @@ function buyBonus(price) {
     }
     return false;
 }
-
+function formatCompactNumber(number) {
+    const formatter = Intl.NumberFormat("en", { notation: "compact" });
+    return formatter.format(number);
+}
 function updateStats() {
-    document.getElementById("cookie-per-click").textContent = getCookiePerClick();
-    document.getElementById("cookie-amount").textContent = getCookies();
-    document.getElementById("click-per-second").textContent = getClickPerSecond();
-    document.getElementById("cookie-per-second").textContent = getCookiePerSecond();
-    document.getElementById("cookie-multiplier").textContent = getCookiePerClickMultiplied() * 100 +"%";
+    document.getElementById("cookie-per-click").textContent = formatCompactNumber(getCookiePerClick());
+    document.getElementById("cookie-amount").textContent = formatCompactNumber(getCookies());
+    document.getElementById("click-per-second").textContent = formatCompactNumber(getClickPerSecond());
+    document.getElementById("cookie-per-second").textContent = formatCompactNumber(getCookiePerSecond());
+    document.getElementById("cookie-multiplier").textContent = "* " + formatCompactNumber(getCookiePerClickMultiplied());
 }
 
 function bonusClick(bonus) {
@@ -73,7 +76,7 @@ function bonusClick(bonus) {
         localStorage.setItem("click-auto-sec", Number(localStorage.getItem("click-auto-sec")) + 1);
     }
 
-    else if (bonus == 3) {
+    else if (bonus == 3 && buyBonus(1000)) {
         localStorage.setItem("cookie-multiplicator", Number(localStorage.getItem("cookie-multiplicator")) + 1);
     }
 
@@ -92,10 +95,42 @@ function run() {
 
             var CookiePerSec = ClickSec * CookiePerClick;
 
-            localStorage.setItem("cookie-amount", getCookies() + CookiePerSec / 2);
+            localStorage.setItem("cookie-amount", getCookies() + CookiePerSec / 10);
             updateStats();
 
             resolve();
-        }, 500);
+        }, 100);
     });
+}
+
+function buyMode(mode) {
+    const element = document.getElementById("buyMenu");
+    for (let i = 0; i < element.children.length; i++) {
+        element.children[i].className = "";
+    }
+
+    if (mode == 1) {
+        document.getElementById("x1").className = "active";
+        localStorage.setItem("buyMode", 1);
+    }
+    else if (mode == 2) {
+        document.getElementById("x5").className = "active";
+        localStorage.setItem("buyMode", 2);
+    }
+    else if (mode == 3) {
+        document.getElementById("x10").className = "active";
+        localStorage.setItem("buyMode", 3);
+    }
+    else if (mode == 4) {
+        document.getElementById("x50").className = "active";
+        localStorage.setItem("buyMode", 4);
+    }
+    else if (mode == 5) {
+        document.getElementById("x100").className = "active";
+        localStorage.setItem("buyMode", 5);
+    }
+    else if (mode == 6) {
+        document.getElementById("xMax").className = "active";
+        localStorage.setItem("buyMode", 6);
+    }
 }

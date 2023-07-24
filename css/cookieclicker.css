@@ -8,15 +8,50 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: var(--background-color-darkest);
+    user-select: none;
+}
+
+#cookieclicker>a {
+    color: var(--text-color-white);
+
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+#buyMenu {
+    position: absolute;
+    top: 20%;
+    right: 50px;
+}
+
+#buyMenu>div {
     background-color: var(--background-color);
+    padding: 5px;
+    margin: 10px;
+
+    border-radius: 32px;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 2px;
+    border-style: solid;
+
+    display: flex;
+    justify-content: center;
+}
+
+#buyMenu>div:hover {
+    border-color: var(--text-color-white);
+}
+
+#buyMenu>div.active {
+    border-color: var(--main-color);
 }
 
 #stats {
     position: absolute;
     top: 25px;
     left: 50px;
-    bottom: 0;
-    right: 0;
 }
 
 #stats>div {
