@@ -1,0 +1,28 @@
+.ip-logger>div>img {
+    max-width: 100px;
+    max-height: 100px;
+
+    display: inline;
+
+    margin-right: 25px;
+}
+
+.ip-logger>div>h1 {
+    display: inline;
+}
+
+.ip-logger>:first-child {
+    padding-bottom: 25px;
+}
+
+#ip-logger {
+    color: var(--main-color);
+    font-size: xx-large;
+    font-weight: bolder;
+
+    display: inline;
+}
+
+.ip-logger>div>p {
+    display: inline;
+}

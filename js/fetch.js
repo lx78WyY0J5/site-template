@@ -105,6 +105,16 @@ async function custom_pages_include() {
         await include_multiple("viewCount", "contentHolder");
     }
 
+    else if (pathname === "/ip/" || pathname === "/ip" || pathname === "/ip.html/" || pathname === "/ip.html") {
+        await include_all();
+        await include_multiple("logger", "contentHolder");
+        
+        await include("/html/contents/matriceHolder.html", "contentHolder", true);
+        await include_multiple("matrice", "matriceHolder");
+
+        await include_multiple("viewCount", "contentHolder");
+    }
+
     else if (pathname === "/matrice/" || pathname === "/matrice" || pathname === "/matrice.html/" || pathname === "/matrice.html") {
         await include("/html/includes/content.html", "body");
         await include_multiple("matrice", "contentHolder");
