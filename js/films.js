@@ -11,31 +11,35 @@ async function run() {
 
 async function getData(array, id) {
     for (let movieID in array) {
-        let data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]);
-
-        let div = document.createElement("div");
-        div.className = "card-red-effect";
-
-        let title = document.createElement("a");
-        title.textContent = await getValue(data, "title");
-        title.href = await getValue(data, "imdb");
-        div.appendChild(title);
-
-        let img = document.createElement("img");
-        img.loading = "lazy";
-        img.src = await getValue(data, "image");
-        div.appendChild(img);
-
-        let text = document.createElement("p");
-        text.textContent = await getValue(data, "plot");
-        div.appendChild(text);
-
-        let divContainer = document.querySelector(id);
-        divContainer.appendChild(div);
+        showData(array, id, movieID);
     }
 }
 
-function gather(url) {
+async function showData(array, id, movieID) {
+    let data = await gather("https://imdb-api.projects.thetuhin.com/title/" + array[movieID]);
+
+    let div = document.createElement("div");
+    div.className = "card-red-effect";
+
+    let title = document.createElement("a");
+    title.textContent = await getValue(data, "title");
+    title.href = await getValue(data, "imdb");
+    div.appendChild(title);
+
+    let img = document.createElement("img");
+    img.loading = "lazy";
+    img.src = await getValue(data, "image");
+    div.appendChild(img);
+
+    let text = document.createElement("p");
+    text.textContent = await getValue(data, "plot");
+    div.appendChild(text);
+
+    let divContainer = document.querySelector(id);
+    divContainer.appendChild(div);
+}
+
+async function gather(url) {
     return new Promise(function (resolve, reject) {
         setTimeout(() => {
             fetch(url)
