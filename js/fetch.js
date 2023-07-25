@@ -82,10 +82,12 @@ async function custom_pages_include() {
         await include("/html/contents/matriceHolder.html", "contentHolder", true);
         await include_multiple("matrice", "matriceHolder");
 
+        await include_multiple("github_update", "contentHolder");
+
         await include_multiple("ping", "contentHolder");
+        
         await include_multiple("date", "contentHolder");
 
-        await include_multiple("github_update", "contentHolder");
         await include_multiple("viewCount", "contentHolder");
     }
 
