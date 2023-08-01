@@ -43,6 +43,7 @@ async function custom_pages_include() {
 
     else if (pathname === "/discord/" || pathname === "/discord" || pathname === "/discord.html/" || pathname === "/discord.html") {
         await include_all();
+        await include_multiple("discord", "contentHolder");
         await include_multiple("viewCount", "contentHolder");
     }
 

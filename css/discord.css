@@ -1,0 +1,24 @@
+.discord>h1 {
+    padding-right: 6px;
+    color: var(--main-color);
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.discord>h1,
+.discord>p {
+    display: inline;
+}
+
+.discord>img {
+    margin-top: 24px;
+    margin-bottom: 48px;
+    display: block;
+
+    width: 256px;
+    border-radius: 100%;
+}
+
+.discord {
+    padding: 64px;
+}
