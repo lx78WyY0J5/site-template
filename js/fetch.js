@@ -85,7 +85,7 @@ async function custom_pages_include() {
         await include_multiple("github_update", "contentHolder");
 
         await include_multiple("ping", "contentHolder");
-        
+
         await include_multiple("date", "contentHolder");
 
         await include_multiple("viewCount", "contentHolder");
@@ -110,7 +110,7 @@ async function custom_pages_include() {
     else if (pathname === "/ip/" || pathname === "/ip" || pathname === "/ip.html/" || pathname === "/ip.html") {
         await include_all();
         await include_multiple("logger", "contentHolder");
-        
+
         await include("/html/contents/matriceHolder.html", "contentHolder", true);
         await include_multiple("matrice", "matriceHolder");
 
@@ -138,7 +138,7 @@ async function custom_pages_include() {
 
         await include_css("/css/404.css");
 
-        await include("/html/contents/poney.html", "contentHolder", true);
+        await include("/html/contents/lostTravolta.html", "contentHolder", true);
 
         await include_multiple("github_update", "contentHolder");
         await include_multiple("viewCount", "contentHolder");
