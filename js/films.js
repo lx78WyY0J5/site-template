@@ -4,15 +4,14 @@ const series = ["tt1586680", "tt0898266", "tt6226232", "tt1475582", "tt4158110"]
 
 run();
 async function run() {
-    getData(films, ".filmsID");
-    getData(anime, ".animesID");
-    getData(series, ".seriesID");
+    await getData(films, ".randomID");
+    await getData(anime, ".randomID");
+    await getData(series, ".randomID");
 }
 
 async function getData(array, id) {
-    for (let movieID in array) {
-        await showData(array, id, movieID);
-    }
+    let x = Math.floor(Math.random() * array.length);
+    await showData(array, id, x);
 }
 
 async function showData(array, id, movieID) {
@@ -22,17 +21,17 @@ async function showData(array, id, movieID) {
     div.className = "card-red-effect";
 
     let title = document.createElement("a");
-    title.textContent = await getValue(data, "title");
-    title.href = await getValue(data, "imdb");
+    title.textContent = getValue(data, "title");
+    title.href = getValue(data, "imdb");
     div.appendChild(title);
 
     let img = document.createElement("img");
     img.loading = "lazy";
-    img.src = await getValue(data, "image");
+    img.src = getValue(data, "image");
     div.appendChild(img);
 
     let text = document.createElement("p");
-    text.textContent = await getValue(data, "plot");
+    text.textContent = getValue(data, "plot");
     div.appendChild(text);
 
     let divContainer = document.querySelector(id);
@@ -40,7 +39,7 @@ async function showData(array, id, movieID) {
 }
 
 async function gather(url) {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
         setTimeout(() => {
             fetch(url)
                 .then(response => response.json())
@@ -48,8 +47,11 @@ async function gather(url) {
                     resolve(data);
                     return;
                 })
-                .catch(error => console.error(error))
-        }, 15000);
+                .catch(error => {
+                    console.error(error);
+                    return gather(url);
+                })
+        }, 1500);
     });
 }
 
