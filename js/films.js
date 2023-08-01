@@ -11,7 +11,7 @@ async function run() {
 
 async function getData(array, id) {
     for (let movieID in array) {
-        showData(array, id, movieID);
+        await showData(array, id, movieID);
     }
 }
 
