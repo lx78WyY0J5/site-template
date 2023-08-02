@@ -52,12 +52,6 @@ async function custom_pages_include() {
         await include_multiple("viewCount", "contentHolder");
     }
 
-    else if (pathname === "/github/" || pathname === "/github" || pathname === "/github.html/" || pathname === "/github.html") {
-        await include_all();
-        await include_multiple("github_update", "contentHolder");
-        await include_multiple("viewCount", "contentHolder");
-    }
-
     else if (pathname === "/jeux/" || pathname === "/jeux" || pathname === "/jeux.html/" || pathname === "/jeux.html") {
         await include_all();
 
