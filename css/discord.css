@@ -2,8 +2,7 @@
     color: var(--main-color);
 }
 
-.discord>h1,
-.discord>h2 {
+.discord>h1 {
     font-weight: bolder;
     font-size: 64px;
     display: inline;
