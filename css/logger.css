@@ -15,6 +15,10 @@
     padding-bottom: 25px;
 }
 
+.ip-logger>div>p {
+    display: inline;
+}
+
 #ip-logger {
     color: var(--main-color);
     font-size: xx-large;
@@ -23,6 +27,13 @@
     display: inline;
 }
 
-.ip-logger>div>p {
+#data {
     display: inline;
+    color: var(--text-color);
+}
+
+#text {
+    font-size: x-large;
+    display: inline;
+    color: var(--main-color);
 }

@@ -13,7 +13,7 @@
 }
 
 #cookieclicker>a {
-    color: var(--text-color-white);
+    color: var(--text-color);
 
     position: absolute;
     top: 15px;
@@ -41,7 +41,7 @@
 }
 
 #buyMenu>div:hover {
-    border-color: var(--text-color-white);
+    border-color: var(--text-color);
 }
 
 #buyMenu>div.active {
@@ -74,7 +74,7 @@
 
 p,
 h1 {
-    color: var(--text-color-white);
+    color: var(--text-color);
 }
 
 #cookie {
