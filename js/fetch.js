@@ -35,9 +35,6 @@ async function custom_pages_include() {
 
         await include("/html/contents/home.html", "contentHolder", true);
 
-        await include("/html/contents/matriceHolder.html", "contentHolder", true);
-        await include_multiple("matrice", "matriceHolder");
-
         await include_multiple("viewCount", "contentHolder");
     }
 
