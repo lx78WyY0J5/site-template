@@ -60,8 +60,8 @@ async function custom_pages_include() {
 
     else if (pathname === "/films/" || pathname === "/films" || pathname === "/films.html/" || pathname === "/films.html") {
         await include_all();
-        include_css("/css/films.css");
-        include("/html/contents/films.html", "contentHolder", true);
+        await include_css("/css/films.css");
+        await include("/html/contents/films.html", "contentHolder", true);
 
         await include_multiple("viewCount", "contentHolder");
     }
