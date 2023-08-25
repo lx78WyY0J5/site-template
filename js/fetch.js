@@ -110,6 +110,14 @@ async function custom_pages_include() {
         await include_multiple("viewCount", "contentHolder");
     }
 
+    else if (pathname === "/cesar/" || pathname === "/cesar" || pathname === "/cesar.html/" || pathname === "/cesar.html") {
+        await include_all();
+
+        await include_multiple("cesar", "contentHolder");
+
+        await include_multiple("viewCount", "contentHolder");
+    }
+
     else if (pathname === "/matrice/" || pathname === "/matrice" || pathname === "/matrice.html/" || pathname === "/matrice.html") {
         await include("/html/includes/content.html", "body");
         await include_multiple("matrice", "contentHolder");
