@@ -6,6 +6,10 @@
 #cesar>input {
     display: block;
     padding: 15px;
+
+    background-color: var(--background-color-darkest);
+    border-color: var(--main-color);
+    color: var(--text-color);
 }
 
 #cesar>#number {
