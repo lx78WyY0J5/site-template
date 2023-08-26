@@ -10,6 +10,7 @@
     background-color: var(--background-color-darkest);
     border-color: var(--main-color);
     color: var(--text-color);
+    margin-bottom: 20px;
 }
 
 #cesar>#number {
@@ -38,6 +39,15 @@
     border-style: dashed;
     padding: 3px;
     transition: 0.5s;
+}
+
+#cesar-text>div>#title>h1,
+#cesar-text>div>#title>p {
+    display: inline;
+}
+
+#cesar-text>div>#title>p {
+    margin-left: 15px;
 }
 
 #cesar-text {
