@@ -20,5 +20,3 @@ function cipherText(text, rotation) {
         document.getElementById("output").value += String.fromCharCode(value);
     }
 }
-
-//String.fromCharCode(65,66,67); (renvoie ABC)
