@@ -9,14 +9,32 @@
     --background-color-transparent: rgba(var(--background-color), 0.5);
     --box-shadow-all-inset-border-color: 0px 0px 20px 5px var(--background-color), inset 0px 0px 20px 1px var(--background-color);
     --box-shadow-all-inset-main-color: 0px 0px 20px 10px var(--main-color-transparent), inset 0px 0px 20px 3px var(--main-color-transparent);
-
-    /*default theme*/
-    --text-color: white;
-    --main-color: red;
-    --main-color-transparent: rgba(255, 0, 0, 0.5);
-    --background-color: rgb(50, 50, 50);
-    --background-color-darkest: rgba(30, 30, 30);
 }
+
+:root.glass {
+    /*default theme*/
+    --text-color: lightgray;
+    --main-color: white;
+    --main-color-transparent: rgba(20, 20, 20, 0.5);
+    --background-color: rgba(50, 50, 50, 0.25);
+    --background-color-darkest: rgba(30, 30, 30, 0.25);
+
+    background-image: url(/media/gif/background.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+:root.glass .card,
+:root.glass .card-red-effect,
+:root.glass header,
+:root.glass footer,
+:root.glass .subnav-content {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 
 :root.black {
     --text-color: white;
@@ -27,7 +45,11 @@
 }
 
 :root.dark {
-    /*default theme*/
+    --text-color: white;
+    --main-color: red;
+    --main-color-transparent: rgba(255, 0, 0, 0.5);
+    --background-color: rgb(50, 50, 50);
+    --background-color-darkest: rgba(30, 30, 30);
 }
 
 :root.light {

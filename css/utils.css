@@ -26,7 +26,6 @@ html {
     height: fit-content;
     vertical-align: top;
     transition: 1.5s;
-    backdrop-filter: blur(2px);
     display: inline-block;
     border-color: var(--background-color-darkest);
     box-shadow: var(--box-shadow-all-inset-border-color);
