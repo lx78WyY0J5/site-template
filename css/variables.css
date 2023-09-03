@@ -11,6 +11,7 @@
     --box-shadow-all-inset-main-color: 0px 0px 20px 10px var(--main-color-transparent), inset 0px 0px 20px 3px var(--main-color-transparent);
 }
 
+
 :root.glass {
     /*default theme*/
     --text-color: lightgray;
@@ -34,6 +35,9 @@
     background-color: rgba(0, 0, 0, 0.25);
 }
 
+:root.glass header {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
 :root.black {
     --text-color: white;
