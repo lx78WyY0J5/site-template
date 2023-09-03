@@ -1,29 +1,22 @@
+.discord {
+    text-align: center;
+}
+
 .discord>h1 {
     color: var(--main-color);
     font-weight: bolder;
     font-size: 64px;
-    display: inline;
-    position: relative;
-
-    top: -150px;
-    left: -25px;
 }
 
 .discord>img {
     margin-bottom: 4px;
 
-    display: inline;
 
     width: 256px;
 
     border-radius: 100%;
 
     box-shadow: var(--box-shadow-all-inset-main-color);
-}
-
-.discord {
-    padding: 64px;
-    text-align: center;
 }
 
 .discord>div {
