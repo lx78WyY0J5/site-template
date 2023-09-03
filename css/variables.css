@@ -27,7 +27,6 @@
 
 :root.glass .card,
 :root.glass .card-red-effect,
-:root.glass header,
 :root.glass footer,
 :root.glass .subnav-content {
     backdrop-filter: blur(15px);
