@@ -124,9 +124,6 @@ async function custom_pages_include() {
     }
 
     else if (pathname === "/cookieclicker/" || pathname === "/cookieclicker" || pathname === "/cookieclicker.html/" || pathname === "/cookieclicker.html") {
-        await include_css("/css/variables.css");
-        await include_script("/js/theme.js");
-
         await include("/html/includes/content.html", "body");
 
         await include_multiple("cookieclicker", "contentHolder");

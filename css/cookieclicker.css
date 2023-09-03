@@ -1,3 +1,10 @@
+* {
+    --text-color: white;
+    --background-color-darkest: rgb(40, 40, 40);
+    --main-color: red;
+    --background-color: rgba(255, 255, 255, 0.15);
+}
+
 #cookieclicker {
     position: absolute;
     top: 0;
