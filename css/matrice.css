@@ -54,5 +54,6 @@
 }
 
 #matriceHolder {
+    backdrop-filter: blur(10px);
     overflow: hidden;
 }
