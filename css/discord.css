@@ -44,7 +44,7 @@
     justify-content: flex-start;
     align-items: center;
 
-    border: 4px ridge var(--main-color);
+    border: 4px ridge var(--border-color);
     border-radius: 12px;
 
     margin-top: 12px;

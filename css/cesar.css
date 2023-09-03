@@ -8,7 +8,7 @@
     padding: 15px;
 
     background-color: var(--background-color-darkest);
-    border-color: var(--main-color);
+    border-color: var(--border-color);
     color: var(--text-color);
     margin-bottom: 20px;
 }
@@ -19,14 +19,14 @@
 
 #cesar>#btn {
     margin: 15px;
-    border-color: var(--text-color);
+    border-color: var(--border-color);
     border-radius: 2px;
     border-style: ridge;
     text-align: center;
 }
 
 #cesar>#btn:hover {
-    border-color: var(--main-color);
+    border-color: var(--border-color);
     border-radius: 3px;
     border-style: ridge;
     padding: 3px;
@@ -34,7 +34,7 @@
 }
 
 #cesar>#btn:active {
-    border-color: var(--main-color);
+    border-color: var(--border-color);
     border-radius: 2px;
     border-style: dashed;
     padding: 3px;

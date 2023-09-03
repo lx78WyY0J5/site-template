@@ -15,9 +15,9 @@
     /*default theme*/
     --text-color: lightgray;
     --main-color: white;
-    --main-color-transparent: rgba(20, 20, 20, 0.5);
-    --background-color: rgba(50, 50, 50, 0.25);
-    --background-color-darkest: rgba(30, 30, 30, 0.25);
+    --main-color-transparent: rgba(255, 0, 0, 0.5);
+    --background-color: transparent;
+    --background-color-darkest: transparent;
 
     background-image: url(/media/gif/background.gif);
     background-repeat: no-repeat;
