@@ -77,7 +77,7 @@ function error(id) {
         iterations: 2,
     };
 
-    const newspaper = document.getElementById(id);
+    const element = document.getElementById(id);
 
-    newspaper.animate(animation, property);
+    element.animate(animation, property);
 }
