@@ -129,6 +129,12 @@ async function custom_pages_include() {
         await include_multiple("cookieclicker", "contentHolder");
     }
 
+    else if (pathname === "/discordapi/" || pathname === "/discordapi" || pathname === "/discordapi.html/" || pathname === "/discordapi.html") {
+        await include_all();
+
+        await include_multiple("discordapi", "contentHolder");
+    }
+
 
     /*else if (pathname.startsWith("/..../")) {    }*/
 

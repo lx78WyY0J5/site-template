@@ -1,0 +1,16 @@
+#discordapi>input {
+    background-color: var(--background-color-darkest);
+    padding: 12px;
+    margin: 5px;
+    color: var(--text-color);
+    border-color: var(--main-color)
+}
+
+#discordapi>button {
+    padding: 10px;
+}
+
+#discordapi>a {
+    display: block;
+    text-decoration: underline;
+}
