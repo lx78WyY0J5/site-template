@@ -1,19 +1,16 @@
 <div class="main-anchor">
 
-    <div class="anchor hidder settings card-red-effect" tabindex="0" style="display: none;">
+    <div class="anchor hidder settings card-red-effect" tabindex="0">
         <p>⚙️</p>
         <div class="submenu card">
             <p>⚙️</p>
             <h2>Paramètres</h2>
             <div>
-                <p>y'a rien :D</p>
+                <p onclick="resetLocalStorage();">Vider le "Local storage"</p>
+                <br>
+                <p onclick="resetCookieClickerStorage();">Vider la session Cookie clicker</p>
+                <p onclick="resetWebSiteStorage();">Vider la session du site</p>
             </div>
-            <p>Settings placeholder</p>
-            <p>Settings placeholder</p><br>
-            <p>Settings placeholder</p>
-            <p>Settings placeholder</p>
-            <p>Settings placeholder</p><br><br>
-            <p>Settings placeholder</p>
         </div>
     </div>
 
@@ -52,22 +49,6 @@
                 <p id="music-current-time">00:00</p>
                 <p>/</p>
                 <p id="music-total-duration">00:00</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="anchor hidder videos card-red-effect" tabindex="0" style="display: none;">
-        <p>📺</p>
-        <div tabindex="0" class="submenu card">
-            <p>📺</p>
-            <h2>Vidéos</h2>
-            <div>
-                <iframe tabindex="0" src="https://www.youtube-nocookie.com/embed/Bf7vDBBOBUA"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                    <div tabindex="0"></div>
-                </iframe>
             </div>
         </div>
     </div>

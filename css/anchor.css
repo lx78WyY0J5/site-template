@@ -11,15 +11,12 @@
     padding-right: 80px;
 }
 
-.settings {
-    margin-top: 0vh;
-}
 
-.music {
+.settings {
     margin-top: 15vh;
 }
 
-.videos {
+.music {
     margin-top: 30vh;
 }
 
@@ -28,7 +25,7 @@
 }
 
 .bot {
-    margin-top: 70vh;
+    margin-top: 65vh;
 }
 
 .top {
@@ -171,12 +168,18 @@ Theme
 }
 
 /*
-videos
-*/
-
-/*
 Paramètre
 */
-.settings>.submenu>div>p {
-    display: block;
+.settings>.submenu>div {
+    flex-direction: column;
+}
+
+.settings>.submenu>div>p:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.settings>.submenu>div>p:active{
+    transform: scale(1.5);
+    transition:0.5s;
 }

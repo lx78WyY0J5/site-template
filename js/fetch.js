@@ -17,6 +17,7 @@ async function include_all() {
     await include_css("/css/anchor.css");
     await include("/html/includes/anchor.html", "contentAnchor", true);
     await include_script("/js/music.js");
+    await include_script("/js/settings.js");
 
     await include_css("/css/footer.css");
     await include("/html/includes/footer.html", "body", false);
