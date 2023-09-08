@@ -26,6 +26,7 @@
     background-size: 100% 100%;
 }
 
+:root.glass #headerbackground,
 :root.glass .card,
 :root.glass .card-red-effect,
 :root.glass footer,
@@ -35,8 +36,15 @@
     background-color: rgba(0, 0, 0, 0.25);
 }
 
-:root.glass header {
-    background-color: rgba(0, 0, 0, 0.5);
+:root.glass #headerbackground {
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
 }
 
 :root.black {
