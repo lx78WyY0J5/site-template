@@ -17,6 +17,7 @@ function logIntoDocumentIP(ip) {
 
 function logIntoDocument(text, data) {
     document.getElementById("logger").innerHTML += "<p id=\"text\">" + text + "</p><p id=\"data\">" + data + "</p><br>";
+    //créer la balise dans le doc, et juste faire innerText ou .text="" pour corriger une faille XSS "non utilisable"
 }
 
 function logIntoDocumentBR() {
