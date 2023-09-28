@@ -16,7 +16,7 @@
 
     border-radius: 100%;
 
-    position: fixed;
+    position: static;
 
     margin-top: -20px;
     margin-left: 20px;
